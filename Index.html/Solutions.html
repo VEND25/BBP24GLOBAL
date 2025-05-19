@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBP24Global</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+    <style>
+        :root {
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --accent-color: #1600db;
+    --text-color: #0d0275;
+    --text-secondary: #bbbbbb;
+    --font-main:var(--font-main)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+.header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 96px;
+      z-index: 1000;
+      padding: 20px 0;
+      background-color: var(--primary-color);
+      backdrop-filter: blur(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      border-bottom: 3px solid blue;    
+    }
+
+    .header.hidden {
+      opacity: 0;
+      transform: translateY(-100%);
+      pointer-events: none;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 69px;
+      width: auto;
+      margin-left: -21px;
+      margin-bottom: -10px;
+      margin-top: -10px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .nav-menu li {
+      margin-left: 45px;
+    }
+    .nav-menu li:hover{
+    border-bottom: 2px solid blue;
+    margin-bottom: 15px;
+    width: auto;
+}
+    .nav-menu a {
+      font-weight: 500px;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-family: Heebo, sans-serif;
+    }
+
+    .nma {
+      font-weight: 500;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-family: Heebo, sans-serif;
+      margin-top: 5px;
+      margin-right: 150px;
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      margin-left: 230px;
+    }
+
+    .bar {
+      display: block;
+      width: 25px;
+      height: 2.9px;
+      margin: 6px auto;
+      background-color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+.view-all:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+.hero-section h1 {           
+        font-size: 3rem;                 
+        font-weight: 500px;                       
+        line-height: 1.2;                             
+        margin-top: 80px; 
+        font-family: Georgia, 'Times New Roman', Times, serif;                                
+      }     
+      .hero-section h1 span {           
+        display: block;               
+      }     
+      .hero-section h1 .arrow {           
+        color: var(--text-color);
+        font-size: 40px;  
+        margin-top: -5px;             
+      }     
+      .hlogo{
+        width: 30px;
+        height: auto;
+      }
+.services {
+padding: 60px 20px;
+background-color: #f8f9fb;
+margin-top: 50px;
+margin-bottom: -80px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.services {
+padding: 60px 20px;
+background-color: #f8f9fb;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+text-align: center;
+}
+
+h2 {
+font-size: 36px;
+margin-bottom: 40px;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+}
+
+.service-item {
+background: #ffffff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+}
+
+.service-item:hover {
+transform: translateY(-10px);
+}
+
+.service-item img {
+max-width: 250px;
+max-height: 200px;
+margin-bottom: 20px;
+margin-left: -5px;
+justify-items: center;
+border-radius: 8px;
+
+}
+
+.service-item p {
+font-size: 16px;
+color: #555555;
+line-height: 1.5;
+}
+.fashion-category {
+display: flex;
+flex-wrap: wrap;
+background: #f8f8f8;
+padding: 20px;
+gap: 20px;
+}
+@media (max-width: 768px) {
+.fashion-category {
+flex-direction: column;
+}
+
+.images-grid {
+grid-template-columns: 1fr; /* Only 1 image per row */
+}
+
+.text-section {
+width: 100%;
+}
+}
+
+.images-grid {
+flex: 2;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+}
+
+.images-grid .item img {
+width: 100%;
+border-radius: 8px;
+object-fit: cover;
+background: #fff;
+padding: 10px;
+}
+
+.text-section {
+flex: 1;
+background: var(--text-color);
+color: white;
+padding: 20px;
+border-radius: 8px;
+}
+
+.text-section h2 {
+font-size: 24px;
+margin-bottom: 15px;
+}
+
+.text-section h3 {
+font-size: 18px;
+margin-top: 10px;
+}
+
+.text-section p {
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+.text-section .link {
+display: block;
+margin-top: 20px;
+color: #ffcc00;
+text-decoration: none;
+font-weight: bold;
+}
+.fashion-category {
+display: flex;
+flex-direction: column; /* Stack items vertically */
+background: #f8f8f8;
+padding: 20px;
+gap: 20px;
+}
+
+.images-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+}
+
+.images-grid .item img {
+width: 100%;
+border-radius: 8px;
+object-fit: cover;
+background: #fff;
+padding: 10px;
+}
+
+.text-section {
+background: rgba(3, 16, 92, 0.979);
+color: white;
+padding: 20px;
+border-radius: 8px;
+}
+@media (max-width: 768px) {
+.images-grid {
+grid-template-columns: 1fr; /* 1 column for mobile */
+}
+}
+.category-section {
+display: flex;
+flex-wrap: wrap;
+padding: 20px;
+gap: 20px;
+background: #f9f9f9;
+margin-bottom: 40px;
+border-radius: 10px;
+}
+@media (max-width: 768px) {
+.fashion-category {
+flex-direction: column;
+}
+
+.images-grid {
+}
+
+.text-section {
+width: 100%;
+}
+}
+
+.images-grid .item img {
+width: 100%;
+border-radius: 8px;
+background: #fff;
+padding: 8px;
+object-fit: cover;
+}
+
+.text-box {
+flex: 1;
+background-color: rgba(3, 16, 92, 0.979);
+color: #fff;
+padding: 20px;
+border-radius: 8px;
+}
+
+.text-box h2 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.text-box p {
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+.text-box a {
+color: #ffcc00;
+text-decoration: none;
+font-weight: bold;
+display: block;
+margin-top: 10px;
+}
+.section-wrapper {
+display: flex;
+flex-direction: column; /* Mobile first: stacked */
+gap: 20px;
+padding: 20px;
+}
+
+section {
+background-color: #f0f0f0;
+padding: 20px;
+border-radius: 8px;
+}
+
+/* For PC layout */
+@media (min-width: 992px) {
+.section-wrapper {
+flex-direction: row; /* Side-by-side */
+}
+
+.section-wrapper section {
+flex: 1; /* Each section takes 50% width */
+}
+}
+
+    
+       
+
+/* Responsive Styles */
+@media (max-width: 1992px) {
+    .hero-content h1 {
+        font-size: 25px;
+    }
+    
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+}
+.btn{
+    font-family: Heebo,sans-serif;
+--text-opacity: 1;
+--bg-opacity: 1;
+box-sizing: border-box;
+border: 0 solid #e2e8f0;
+background-color: transparent;
+color: #0d0275;
+text-decoration: none;
+border-bottom: 1px solid transparent;
+transition: .2s ease;
+--border-opacity: 1;
+border-color:  #0011ff;
+border-radius: 9999px;
+border-width: 2px;
+cursor: pointer;
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+height: 2.9rem;
+margin-left: 1rem;
+margin-top: -4px;
+padding-left: 2rem;
+padding-right: 2rem;
+}
+.btn:hover{
+  background-color: rgb(7, 60, 158);
+    text-decoration-color: #ffffff;
+    border-radius: 9999px;
+    border-width: 2px;
+    border-color: blue;
+}   
+.imgc{
+    width: 20px;
+    height: auto;
+    padding-top: px;
+}
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+        
+    }
+    .logo img {
+      height: 69px;
+      width: auto;
+      margin-left: -20px;
+      margin-right: -0px;
+      margin-bottom: -10px;
+      margin-top: -10px;
+    }
+    
+    .nav-menu {
+        position:absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        padding: 20px 0;
+        transition: left 0.3s ease;
+    }
+    .menu-toggle {
+
+      cursor: pointer;
+      margin-left: 340px;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 25px;
+    }
+    
+    .hero-content p {
+        font-size: 15px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn{
+    font-family: Heebo,sans-serif;
+--text-opacity: 1;
+--bg-opacity: 1;
+box-sizing: border-box;
+border: 0 solid #e2e8f0;
+background-color: transparent;
+color: #0d0275;
+text-decoration: none;
+border-bottom: 1px solid transparent;
+transition: .2s ease;
+--border-opacity: 1;
+border-color:  #0011ff;
+border-radius: 9999px;
+border-width: 2px;
+cursor: pointer;
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+height: 2.9rem;
+width: 180px;
+    margin-top: -3px;
+    text-align: center;
+    align-self: center;
+
+}
+.btn:hover{
+  background-color: rgb(7, 60, 158);
+    text-decoration-color: #ffffff;
+    border-radius: 9999px;
+    border-width: 2px;
+    border-color: blue;
+}   
+.menu-toggle {
+cursor: pointer;
+margin-left: 460px;
+}
+.nav-menu li:hover{
+    border-bottom: 2px solid blue;
+    margin-bottom: 15px;
+    max-width: 130px;
+    align-self: center;
+}
+    }
+@media (max-width:708px) {
+    .menu-toggle {
+        display: block;
+        
+    }
+    .nav-menu li:hover{
+    border-bottom: 2px solid blue;
+    margin-bottom: 15px;
+    max-width: 130px;
+    align-self: center;
+}
+    .logo img {
+      height: 69px;
+      width: auto;
+      margin-left: -20px;
+      margin-right: -30px;
+      margin-bottom: -10px;
+      margin-top: -10px;
+    }
+    
+    .nav-menu {
+        position:absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        padding: 20px 0;
+        transition: left 0.3s ease;
+    }
+    .menu-toggle {
+
+      cursor: pointer;
+      margin-left: 340px;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 25px;
+    }
+    
+    .hero-content p {
+        font-size: 15px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+
+.btn{
+    border: 0 solid #e2e8f0;
+    background-color: transparent;
+    color: #0d0275;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: .2s ease;
+    --border-opacity: 1;
+    border-color:  #0011ff;
+    border-radius: 9999px;
+    border-width: 2px;
+    cursor: pointer;
+    display: flex;
+    height: 2.9rem;
+    width: 180px;
+    margin-top: -3px;
+    text-align: center;
+    align-self: center;
+}
+.btn:hover{
+  background-color: rgb(7, 60, 158);
+    text-decoration-color: #ffffff;
+    border-radius: 9999px;
+    border-width: 2px;
+    border-color: blue;
+}
+}
+@media (max-width: 556px) {
+    .hero-content h1 {
+        font-size: 25px;
+    }
+    .nav-menu li:hover{
+    border-bottom: 2px solid blue;
+    margin-bottom: 15px;
+    max-width: 130px;
+    align-self: center;
+}
+    .logo img {
+      height: 69px;
+      width: auto;
+      margin-left:-20px;
+      margin-bottom: -10px;
+      margin-top: -10px;
+    }
+    .menu-toggle {
+    cursor: pointer;
+    margin-left: 210px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+   .btn{
+    border: 0 solid #e2e8f0;
+    background-color: transparent;
+    color: #0d0275;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: .2s ease;
+    --border-opacity: 1;
+    border-color:  #0011ff;
+    border-radius: 9999px;
+    border-width: 2px;
+    cursor: pointer;
+    display: flex;
+    height: 2.9rem;
+    width: 180px;
+    margin-top: -3px;
+    text-align: center;
+    align-self: center;
+
+}
+.btn:hover{
+  background-color: rgb(7, 60, 158);
+    text-decoration-color: #ffffff;
+    border-radius: 9999px;
+    border-width: 2px;
+    border-color: blue;
+}
+
+}
+@media (max-width: 456px) {
+    .btn{
+    border: 0 solid #e2e8f0;
+    background-color: transparent;
+    color: #0d0275;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: .2s ease;
+    --border-opacity: 1;
+    border-color:  #0011ff;
+    border-radius: 9999px;
+    border-width: 2px;
+    cursor: pointer;
+    display: flex;
+    height: 2.9rem;
+    width: 180px;
+    margin-top: -3px;
+    text-align: center;
+    align-self: center;
+}
+
+.btn:hover{
+  background-color: rgb(7, 60, 158);
+    text-decoration-color: #ffffff;
+    border-radius: 9999px;
+    border-width: 2px;
+    border-color: blue;
+}
+.logo img {
+      height: 69px;
+      width: auto;
+      margin-left:-20px;
+      margin-right: 120px;
+      margin-bottom: -10px;
+      margin-top: -10px;
+    }
+    .menu-toggle {
+    cursor: pointer;
+    margin-left: 190px;
+    }
+}
+.footer {
+  background:rgb(3, 18, 68);
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 30px;
+}
+.bb{
+  border-bottom: 1px solid #c7ccce;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  max-width: 300px;
+  margin: 0;
+}
+
+.footer-left ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-left ul li a:hover{
+  border-bottom: 2px solid#00bda0;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.footer-left ul li {
+  margin-bottom: 10px;
+}
+
+.footer-left ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  height: 60px;
+  width: 200px;
+}
+
+.footer-right .newsletter label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.email-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.email-group input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.email-group button {
+  padding: 10px 20px;
+  border: 2px solid #00b99e;
+  color: #00e6c3;
+  background: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.email-group button:hover {
+  background: #00b99e;
+  color: #0c2b36;
+}
+
+.checkbox {
+  font-size: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid #2f5866;
+  padding: 0 10px;
+}
+.footer-links a:hover{
+  border-bottom: 2px solid#00bda0;
+  margin-bottom: 5px;
+  width: auto;
+}
+
+.footer-links a:last-child {
+  border-right: none;
+}
+
+.footer-social {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.fab{
+  width: 23px;
+ 
+}
+
+.footer-social a {
+  color: #00bda0;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  font-size: 12px;
+  text-align: center;
+  color: #ccc;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1268px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left, .footer-right {
+    text-align: center;
+  }
+
+  .email-group {
+    flex-direction: column;
+  }
+
+  .email-group input,
+  .email-group button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .email-group button {
+  padding: 10px 20px;
+  border: 2px solid #00e6c3;
+  color: #00e6c3;
+  background: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+  .checkbox {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    border-right: none;
+    padding: 5px 0;
+  }
+  .footer-top{
+    margin-right: 50px;
+    margin-left: 30px;
+  }
+}
+@media (min-width: 1268px){
+  .footer-left,
+  .footer-right{
+    max-width: 280px;
+  }
+  .footer-top{
+    margin-right: 450px;
+    margin-left: 530px;
+  }
+  }
+  .par{
+    font-size: 33px;
+    text-align: center;
+  }
+    </style>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="img/logo2.PNG" alt="BBP24GlobLogo">
+                </a>
+                <div class="menu-toggle" id="mobile-menu" >
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Who Are We.html">Who Are We</a></li>
+                    <li><a href="What We Do.html">What We Do</a></li>
+                    <li><a href="Our Procedure.html">Our Procedures</a></li>
+                    <li class="nma"><a href="Solutions.html">Solutions</a></li>
+                    <div class="btn"><a href="Contact us.html">Contact Us</a><img src="img/logo.png" class="imgc"></div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="services">
+      <div class="par">
+        <p><b>             
+          <span>Our</span>                                          
+           <span>Solutions<span class="arrow"><img src="img/logo.png" class="hlogo">›
+           </span>
+          </span></b>                             
+        </p>
+    </section>
+    <div class="section-wrapper">
+    <section class="fashion-category">
+      <div class="images-grid">
+        <div class="item"><img src="img/fcc.PNG" alt="Hoodie"></div>
+        
+      </div>
+    
+      <div class="text-section">
+        <h2>Fashion & Clothing Category</h2>
+        <h3>Apparel:</h3>
+        <p>Clothing for men, women and children.</p>
+    
+        <h3>Sportswear:</h3>
+        <p>Shorts, tracksuits, swimsuits, wet suits, ski wear and helmets.</p>
+    
+        <h3>Accessories:</h3>
+        <p>Ties, cufflinks, handbags, hats, gloves, belts, suspenders, eyewear, wallets, umbrellas, socks and stockings.</p>
+    
+        <a href="https://www.bbp24global.com" class="link">www.bbp24global.com</a>
+      </div>
+    </section>
+    <section class="fashion-category">
+      <div class="images-grid">
+        <div class="item"><img src="img/fdc.PNG" alt="Can"></div>
+        
+      </div>
+      <div class="text-box">
+        <h2>Food and Drinks Category</h2>
+        <p>This category contains Apron, Chopping board, Muffin glove, Plate, Pot, Kettle, Cooler bag, etc.</p>
+        <a href="https://www.bbp24global.com">www.bbp24global.com</a>
+      </div>
+    </section>
+    </div>
+    
+    <div class="section-wrapper">
+    <section class="fashion-category">
+      <div class="images-grid">
+        <div class="item"><img src="img/bs.PNG" alt="Water Bottle"></div>
+        
+      </div>
+      <div class="text-box">
+        <h2>Back to School</h2>
+        <p>This includes Backpack, Water bottle, Book, Pen, Lunch bag, Socks, Math set, etc.</p>
+        <a href="https:// ww.bbp24global.com">www.bbp24global.com</a>
+      </div>
+    </section>
+    
+    <section class="fashion-category">
+      <div class="images-grid">
+        <div class="item"><img src="img/brw.PNG" alt="Ice Bucket"></div>
+        
+      </div>
+      <div class="text-box">
+        <h2>Breweries</h2>
+        <p>Ice bucket, Glassware, Bar runner, Coaster, Opener, Tray, Table & Chair, Table cover, Table tent, LED lights, etc.</p>
+        <a href="https://www.bbp24global.com">www.bbp24global.com</a>
+      </div>
+    </section>
+    </div>
+    <div class="section-wrapper">
+    <section class="fashion-category">
+      <div class="images-grid">
+        <div class="item"><img src="img/mat.PNG" alt="Headphones"></div>
+      
+      </div>
+      <div class="text-box">
+        <h2>Music and Telecomm</h2>
+        <p>Flash drive, Power bank, Phone holder, Phone pouch, Pop socket, Digital diary, Ear piece, etc.</p>
+        <a href="https://www.bbp24global.com">www.bbp24global.com</a>
+      </div>
+    </section>
+    
+    <section class="fashion-category">
+      <div class="images-grid">
+        <div class="item"><img src="img/bap.PNG" alt="Cream Box"></div>
+        
+        
+      </div>
+      <div class="text-box">
+        <h2>Beauty and Pharmaceutical</h2>
+        <p>Various creams, lotions, jars, and pharmaceutical packaging solutions.</p>
+        <a href="https://www.bbp24global.com">www.bbp24global.com</a>
+      </div>
+    </section>
+    </div>
+    
+    <div class="section-wrapper">
+    <section class="fashion-category">
+      <div class="images-grid">
+        <div class="item"><img src="img/eg.PNG" alt="Helmet"></div>
+        
+      </div>
+      <div class="text-box">
+        <h2>Engineering Firm</h2>
+        <p>Helmet, Reflective jacket, Safety boot, Conti suit, Hand glove, Ear muff, Safety goggle, Safety signage, etc.</p>
+        <a href="https://www.bbp24global.com">www.bbp24global.com</a>
+      </div>
+    </section>
+    
+    <section class="fashion-category">
+      <div class="images-grid">
+        <div class="item"><img src="img/fas.PNG" alt="Gazebo Tent"></div>
+       
+      </div>
+      <div class="text-box">
+        <h2>Fabrication and Signage</h2>
+        <p>POS Stand, Gazebo tent, Glazed poster, Wall signage, Feather banner, Media walls, Neon signage, etc.</p>
+        <a href="https://www.bbp24global.com">www.bbp24global.com</a>
+      </div>
+    </section>
+    </div>
+
+    <div class="section-wrapper">
+    <section class="fashion-category">
+      <div class="images-grid">
+        <div class="item"><img src="img/fmcg1.PNG" alt="Branded Kites"></div>
+        
+      </div>
+      <div class="text-box">
+        <h2>FMCG Companies</h2>
+        <p>T-shirt, Umbrella, Parasol, Pen, Flask, Football, Tote bag, Key ring, Lanyard, Cup, Back scratcher, Face cap, Face towel, Spoon, etc.</p>
+        <a href="https://www.bbp24global.com">www.bbp24global.com</a>
+      </div>
+    </section>
+    
+    <section class="category">
+      <div class="images-grid">
+        <div class="item"><img src="img/ps1.PNG" alt="Tent"></div>
+        
+      </div>
+      <div class="text-box">
+        <h2>Photo Speak</h2>
+        <p>Examples of branded products and promotional items created for different corporate events and marketing campaigns.</p>
+        <a href="https://www.bbp24global.com">www.bbp24global.com</a>
+      </div>
+    </section>
+    </div>
+    </main>
+    <footer class="footer">
+    <div class="footer-logo">
+      <img src="img/flogo-removebg-preview (1).png" alt="Link logo" />
+    </div>
+    <div class="footer-top">
+      <div class="footer-left">
+        <ul>
+          <li><a href="#">Read our blog</a></li>
+          <li><a href="Contact us.html"> Contact us</a></li>
+          <li><a href="https://wa.me/+2348164355790">Inquire Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <form action="mailto:bbp24global@gmail.com" class="newsletter">
+          <label for="email">Subscribe to our newsletter:</label>
+          <div class="email-group">
+            <input type="email" id="email" placeholder="Email address*" required />
+            <button type="submit">Send</button>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" required />
+            By ticking this box you agree to our Privacy Policy and agree to receive marketing from Link
+          </label> 
+        </form>
+      </div>
+    </div>
+    <div class="bb"></div>
+    <div class="footer-links">
+      <a href="Index.html">HOME</a>
+      <a href="Who Are We.html">WHO ARE WE</a>
+      <a href="What We Do.html">WHAT WE DO</a>
+      <a href="Our Procedure.html">OUR PROCEDURE</a>
+      <a href="Solutions.html">SOLUTIONS</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://x.com/Bbp24global?s=08"><i><img src="img/twitter-x-512.png" class="fab"></i></a>
+      <a href="https://wa.me/+2348164355790"><i><img src="img/whatsapp.png" class="fab"></i></a>
+      <a href="https://ng.linkedin.com/in/biola-bbp24global?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile"><i><img src="img/linkedin-3-512.png" class="fab"></i></a>
+      <a href="https://www.instagram.com/bbp24global?igsh=YzljYTk1ODg3Zg=="><i><img src="img/instagram-white-icon.png" class="fab"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Africaa Solution Sourcing Limited trading as BBP24. Head office: Block 20, Suite 2/3 Odua Shopping Complex 384, Ikorodu Road, Ojota, Lagos. Founded: 28 January, 2005. Registered in Nigeria.</p>
+    </div>
+  </footer>
+
+    
+    <script>
+
+const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+
+      lastScrollY = currentScrollY;
+    });
+        // Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    function toggleMenu() {
+                  const nav = document.getElementById('navLinks');
+                  nav.classList.toggle('show');
+                }
+    
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Add scroll effect to header
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) {
+            header.style.backgroundColor = '#fff';
+        } else {
+            header.style.backgroundColor = '#fff';
+        }
+    });
+    
+    // Lazy load images
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    lazyImages.forEach(img => {
+        imageObserver.observe(img);
+    });
+});
+    </script>
+</body>
+</html>
