@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBP24Global</title>
+    <link rel="stylesheet" href="who we are.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+   
+    
+    <body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="img/logo2.PNG" alt="BBP24GlobLogo">
+                </a>
+                <div class="menu-toggle" id="mobile-menu" >
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Who Are We.html">Who Are We</a></li>
+                    <li><a href="What We Do.html">What We Do</a></li>
+                    <li><a href="Our Procedure.html">Our Procedures</a></li>
+                    <li class="nma"><a href="Solutions.html">Solutions</a></li>
+                    <div class="btn"><a href="Contact us.html">Contact Us</a><img src="img/logo.png" class="imgc"></div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-section">       
+        <h1>             
+          <span>Global</span>                   
+          <span>Sourcing</span>                        
+           <span>Limited <span class="arrow"><img src="img/logo.png" class="hlogo">›
+           </span>
+          </span>                             
+        </h1>     
+        <p class="hero-subtitle"> 
+            Focusing on Conceptualising Design, Sourcing and Supplying of Promotional materials.               
+        </p>     
+        <div class="button-group">           
+          <a href="#waw"><button>Who are we</button></a>                
+          <a href="#about"><button>About Us</button></a>                       
+          <a href="#mainImage"><button>Our principle</button></a>                             
+          <a href="#the-team"><button>The team</button></a>                                 
+        </div>     
+        <div class="world-image">           
+          <p>Discover the advantages that set us apart.</p>                                 
+        </div>      
+        <div class="image-display">       
+            <img id="mainImage" src="img/bla1.jpeg" alt="Main Display" />         
+          </div>   
+          <div class="accordion" onclick="toggleAccordion(this, 'img/bla6.jpeg')">       
+            <h3>Customer first, always</h3>           
+            <div class="accordion-content">                 
+              <p>                         
+                Forward-thinking brands are demanding more from their procurement partnerships.                                 
+                More imaginative campaigns. More engaged customers. More sustainable thinking.                                        
+                 And more value added, in all areas of the business. Our proactive mindset, ability                                                 
+                 to move fast, and desire to share knowledge and expertise, mean we put our clients                                                         
+                 at the heart of everything we do.                                                               
+                </p>                                                                   
+              </div>                                                                     
+            </div>     
+            <div class="accordion" onclick="toggleAccordion(this, 'img/bla2.jpeg')">       
+              <h3>An eye on the future</h3> 
+
+              <div class="accordion-content">                 
+                <p>                         
+                  Our vision is focused on to build a global brand through creation of disruptive advantages
+                  and innovative ideas that continuously support the essences of our 
+                  partners across the entire supply chain. We are commitred to pushinng
+                  bondaries, challenging conventions, and delivering lasting value at every stage - from
+                 concept to consumer - while fostering long-term relationship built on 
+                 trust, collaboration, and shared success.                                       
+                </p>                                           
+              </div>                                             
+            </div>   
+            <div class="accordion" onclick="toggleAccordion(this, 'img/Vision.png')">       
+              <h3>Our Mission</h3> 
+
+              <div class="accordion-content">                 
+                <p>                         
+                  Is to guarantee relability and trust, ensuring paretnership that 
+        not only work but thrive. We are dedicated to building strong, endring
+        relationships founded on integrity, consistency, and mutual success, empowering
+       all stakeholders to achieve thier fullest potential.                                       
+                </p>                                           
+              </div>                                             
+            </div>   
+            <script>       
+            function toggleAccordion(element, imgUrl) {             
+              document.querySelectorAll('.accordion').forEach(acc => {                     
+                if (acc !== element) acc.classList.remove('open');                           
+                });       
+                element.classList.toggle("open");             
+                document.getElementById("mainImage").src = imgUrl;                
+                 }                   
+                 </script>                  
+      </section> 
+      <section class="services">
+        <div class="containerz"  id="waw">
+          <h2>Who Are We</h2>
+          <div class="services-grid">
+            <div class="service-item">
+              <p>BBP24 Global Sourcing Limited is a procurement management
+                partner which focuses on Conceptualising Design, Sourcing and Supplying of Promotional materials
+               </p>
+               <p><b>BBP24 Global Solution</b> was established out of the need to
+                ensure unequal value creation across the marketing spply chain to
+                our brand-partners. We have developed a business model that focuses on increasing
+                the current benefit offerings of the marketing supply chain management whilst reducing the associated costs.
+               </p>
+            </div>
+        </div>
+        <div class="about-container" >
+            <div class="about-text">
+               <h2 id="about">About Us</h2>
+               <p> BBP24 Global Sourcing Solution was established out of 
+                the need to ensure unequal value creations 
+                across the marketing supply chain to our 
+                brand-partners.We have developed a business 
+                model that focuses on increasing the current benefit 
+                offerings of the marketing supply chain management
+                whilst reducing the associated costs. On 
+                the other hand, eliminating the bottlenecks
+                of product and service delivery through the 
+                development of new and effective sourcing 
+                infrastructure.We are leveraging on our industry 
+                knowledge and global best practice to build a global
+                brand through our core value of:
+               </p><li>
+               Continuous creativity and innovation
+
+                <li>Passion for excellency</li>
+
+                <li>Mutual partnership and collaboration</li>
+
+                <li>Technology driven process</li>
+               </p>
+               </p>
+            </div>
+            <div class="about-image">
+                <div class="image-placeholder"></div>
+            </div>
+        </div>
+      </section>
+      <section class="team-section" >
+      <h2 id="the-team">Meet the team</h2>
+          <p>
+                In a B2B world, we are distinctly human. Our teams are creative, hardworking and passionate about what they do. Privately owned, and with 20 years experience in the marketing services industry, driving change, finding answers and creating value is what makes us tick.
+                    </p>
+      </section>              
+    <!--<div class="team-grid">
+          <div class="team-card">
+                  <img src="https://via.placeholder.com/300x300?text=Alec" alt="image 1">
+                          <div class="team-info">
+                                    <h4>Mr. Adebayo</h4>
+                                              <p>Chairman</p>
+                                                        <div class="underline u1"></div>
+                                                                </div>
+                                                                      </div>
+                                                                            <div class="team-card">
+                                                                                    <img src="https://via.placeholder.com/300x300?text=Mark" alt="image 2">
+                                                                                            <div class="team-info">
+                                                                                                      <h4>Mr. Olawale</h4>
+                                                                                                                <p>Chief Executive Officer</p>
+                                                                                                                          <div class="underline u2"></div>
+                                                                                                                                  </div>
+                                                                                                                                        </div>
+                                                                                                                                              <div class="team-card">
+                                                                                                                                                      <img src="https://via.placeholder.com/300x300?text=Pandora" alt="image 3">
+                                                                                                                                                              <div class="team-info">
+                                                                                                                                                                        <h4>Mr. Biola</h4>
+                                                                                                                                                                                  <p>Chief Financial Officer</p>
+                                                                                                                                                                                            <div class="underline u3"></div>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                <div class="team-card">
+                                                                                                                                                                                                                        <img src="https://via.placeholder.com/300x300?text=Emma" alt="image 4">
+                                                                                                                                                                                                                                <div class="team-info">
+                                                                                                                                                                                                                                          <h4>Mr. Emmanuel</h4>
+                                                                                                                                                                                                                                                    <p>Chief Sustainability Officer</p>
+                                                                                                                                                                                                                                                              <div class="underline u4"></div>
+                                                                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                </div>
+            </section>-->
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                  <source src="img/bww1.mp4" type="video/mp4">
+              </video>
+            </div>  
+   
+    </main>
+    <footer class="footer">
+    <div class="footer-logo">
+      <img src="img/flogo-removebg-preview (1).png" alt="Link logo" />
+    </div>
+    <div class="footer-top">
+      <div class="footer-left">
+        <ul>
+          <li><a href="#">Read our blog</a></li>
+          <li><a href="Contact us.html"> Contact us</a></li>
+          <li><a href="https://wa.me/+2348164355790">Inquire Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <form action="mailto:info@bbp24global.com" class="newsletter">
+          <label for="email">Subscribe to our newsletter:</label>
+          <div class="email-group">
+            <input type="email" id="email" placeholder="Email address*" required />
+            <button type="submit">Send</button>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" required />
+            By ticking this box you agree to our Privacy Policy and agree to receive marketing from Link
+          </label> 
+        </form>
+      </div>
+    </div>
+    <div class="bb"></div>
+    <div class="footer-links">
+      <a href="Index.html">HOME</a>
+      <a href="Who Are We.html">WHO ARE WE</a>
+      <a href="What We Do.html">WHAT WE DO</a>
+      <a href="Our Procedure.html">OUR PROCEDURE</a>
+      <a href="Solutions.html">SOLUTIONS</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://x.com/Bbp24global?s=08"><i><img src="img/twitter-x-512.png" class="fab"></i></a>
+      <a href="https://wa.me/+2348164355790"><i><img src="img/whatsapp.png" class="fab"></i></a>
+      <a href="https://ng.linkedin.com/in/biola-bbp24global?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile"><i><img src="img/linkedin-3-512.png" class="fab"></i></a>
+      <a href="https://www.instagram.com/bbp24global?igsh=YzljYTk1ODg3Zg=="><i><img src="img/instagram-white-icon.png" class="fab"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Africaa Solution Sourcing Limited trading as BBP24. Head office: Block 20, Suite 2/3 Odua Shopping Complex 384, Ikorodu Road, Ojota, Lagos. Founded: 28 January, 2005. Registered in Nigeria.</p>
+    </div>
+  </footer>
+
+    
+    <script>
+
+const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+
+      lastScrollY = currentScrollY;
+    });
+        // Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    function toggleMenu() {
+                  const nav = document.getElementById('navLinks');
+                  nav.classList.toggle('show');
+                }
+    
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Add scroll effect to header
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) {
+            header.style.backgroundColor = '#fff';
+        } else {
+            header.style.backgroundColor = '#fff';
+        }
+    });
+    
+    // Lazy load images
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    lazyImages.forEach(img => {
+        imageObserver.observe(img);
+    });
+});
+    </script>
+</body>
+</html>
